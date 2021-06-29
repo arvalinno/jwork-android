@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg2"
+    tools:context=".ApplyJobActivity">
+
+    <TextView
+        android:id="@+id/pesanan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Apply Job"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/staticJobName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Job Name"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/pesanan"
+        app:layout_constraintTop_toBottomOf="@+id/pesanan" />
+
+    <TextView
+        android:id="@+id/job_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="15sp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/staticJobName" />
+
+    <TextView
+        android:id="@+id/staticCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Category"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/staticJobName"
+        app:layout_constraintTop_toBottomOf="@+id/staticJobName" />
+
+    <TextView
+        android:id="@+id/job_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="15sp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/staticCategory" />
+
+    <TextView
+        android:id="@+id/staticFee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Fee"
+        android:textSize="15sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/staticCategory"
+        app:layout_constraintTop_toBottomOf="@+id/staticCategory" />
+
+    <TextView
+        android:id="@+id/job_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="15sp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/staticFee" />
+
+    <TextView
+        android:id="@+id/staticPayMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Payment Method"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/staticFee"
+        app:layout_constraintTop_toBottomOf="@+id/staticFee" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/staticPayMethod"
+        app:layout_constraintTop_toBottomOf="@+id/staticPayMethod">
+
+        <RadioButton
+            android:id="@+id/ewallet"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-Wallet" />
+
+        <RadioButton
+            android:id="@+id/bank"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Referral Code"
+        android:textSize="15sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/referral_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:textSize="15sp"
+        android:hint="Fill Referral Code"
+        app:layout_constraintTop_toTopOf="@+id/textCode" />
+
+    <TextView
+        android:id="@+id/staticTotalFee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Fee"
+        android:textSize="15sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/textCode"
+        app:layout_constraintTop_toBottomOf="@+id/textCode" />
+
+    <TextView
+        android:id="@+id/total_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="TextView"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/staticTotalFee" />
+
+    <Button
+        android:id="@+id/hitung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Count"
+        android:textColor="@color/black"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/staticTotalFee" />
+
+    <Button
+        android:id="@+id/btnApply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Apply Now"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/hitung" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
